@@ -6,8 +6,6 @@ using System.Threading.Tasks;
 
 namespace CalculatorApplication
 {
-    // public delegate F Formula<F>(F arg1);
-
     public delegate double Formula (double arg1 , double arg2);
 
     public class CalculatorClass
@@ -32,9 +30,9 @@ namespace CalculatorApplication
         {
             return sum1 + sum2;
         }
-        public double GetDifference(double diffrence)
+        public double GetDifference(double diff1 , double diff2)
         {
-            return diffrence;
+            return diff1 - diff2;
         }
         public double GetProduct(double multi)
         {

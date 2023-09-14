@@ -45,27 +45,22 @@ namespace CalculatorApplication
             }
             else
             {
-                double result = 0.0;
-
                 num1 = Convert.ToDouble(txtBoxInput1.Text);
                 num2 = Convert.ToDouble(txtBoxInput2.Text);
 
                 if(cbOperator.SelectedItem.ToString() == "+")
                 {
-                    cal.CalculateEvent += (num1, num2) => cal.GetSum(num1, num2);
-                    //cal.CalculateEvent += cal.GetSum();
-                    lblDisplayTotal.Text = result.ToString();
-
+                    cal.CalculateEvent += new Formula(cal.GetSum); 
+                    lblDisplayTotal.Text = cal.GetSum(num1, num2).ToString(); 
+                    cal.CalculateEvent -= new Formula(cal.GetSum);
                 }
-
-                // cal.CalculateEvent -= cal.GetSum;
-
-                //cal.CalculateEvent += new Formula<double>(cal.GetSum);
-
-                //lblDisplayTotal.Text = cal.GetSum(num1, num2).ToString();
-                // cal.CalculateEvent -= new Formula<double>(cal.GetSum);
+                else if(cbOperator.SelectedItem.ToString() == "-")
+                {
+                    cal.CalculateEvent += new Formula(cal.GetDifference);
+                    lblDisplayTotal.Text = cal.GetDifference(num1, num2).ToString();
+                    cal.CalculateEvent -= new Formula(cal.GetDifference);
+                }
             }
-
         }
     }
 }
