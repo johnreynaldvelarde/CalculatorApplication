@@ -6,11 +6,11 @@ using System.Threading.Tasks;
 
 namespace CalculatorApplication
 {
-    public delegate T Information<T>(T arg1);
+    public delegate F Formula<F>(F arg1);
 
     public class CalculatorClass
     {
-        public Information<string> info;
+        public Formula<double> info;
 
     }
 }

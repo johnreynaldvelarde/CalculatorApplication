@@ -33,7 +33,7 @@
             this.txtBoxInput2 = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.btnEqual = new System.Windows.Forms.Button();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.cbOperator = new System.Windows.Forms.ComboBox();
             this.label3 = new System.Windows.Forms.Label();
             this.lblDisplayTotal = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
@@ -87,14 +87,15 @@
             this.btnEqual.UseVisualStyleBackColor = true;
             this.btnEqual.Click += new System.EventHandler(this.btnEqual_Click);
             // 
-            // comboBox1
+            // cbOperator
             // 
-            this.comboBox1.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(324, 101);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(121, 27);
-            this.comboBox1.TabIndex = 5;
+            this.cbOperator.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbOperator.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbOperator.FormattingEnabled = true;
+            this.cbOperator.Location = new System.Drawing.Point(324, 101);
+            this.cbOperator.Name = "cbOperator";
+            this.cbOperator.Size = new System.Drawing.Size(121, 27);
+            this.cbOperator.TabIndex = 5;
             // 
             // label3
             // 
@@ -135,7 +136,7 @@
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.lblDisplayTotal);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.comboBox1);
+            this.Controls.Add(this.cbOperator);
             this.Controls.Add(this.btnEqual);
             this.Controls.Add(this.txtBoxInput2);
             this.Controls.Add(this.label2);
@@ -155,7 +156,7 @@
         private System.Windows.Forms.TextBox txtBoxInput2;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button btnEqual;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox cbOperator;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label lblDisplayTotal;
         private System.Windows.Forms.Panel panel1;
