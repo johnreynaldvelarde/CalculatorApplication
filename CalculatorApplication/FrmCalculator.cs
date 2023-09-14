@@ -60,6 +60,18 @@ namespace CalculatorApplication
                     lblDisplayTotal.Text = cal.GetDifference(num1, num2).ToString();
                     cal.CalculateEvent -= new Formula(cal.GetDifference);
                 }
+                else if (cbOperator.SelectedItem.ToString() == "*")
+                {
+                    cal.CalculateEvent += new Formula(cal.GetProduct);
+                    lblDisplayTotal.Text = cal.GetProduct(num1, num2).ToString();
+                    cal.CalculateEvent -= new Formula(cal.GetProduct);
+                }
+                else if (cbOperator.SelectedItem.ToString() == "/")
+                {
+                    cal.CalculateEvent += new Formula(cal.GetQuotient);
+                    lblDisplayTotal.Text = cal.GetQuotient(num1, num2).ToString();
+                    cal.CalculateEvent -= new Formula(cal.GetQuotient);
+                }
             }
         }
     }

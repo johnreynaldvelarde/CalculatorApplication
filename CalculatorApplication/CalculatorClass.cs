@@ -34,13 +34,13 @@ namespace CalculatorApplication
         {
             return diff1 - diff2;
         }
-        public double GetProduct(double multi)
+        public double GetProduct(double multi1 , double multi2)
         {
-            return multi;
+            return multi1 * multi2 ;
         }
-        public double GetQuotient(double quo)
+        public double GetQuotient(double quo1 , double quo2)
         {
-            return quo;
+            return quo1 / quo2;
         }
 
 
