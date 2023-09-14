@@ -14,8 +14,7 @@ namespace CalculatorApplication
     public partial class FrmCalculator : Form
     {
         CalculatorClass cal;
-        public double num1;
-        public double num2;
+        public double num1, num2;
 
         public FrmCalculator()
         {
