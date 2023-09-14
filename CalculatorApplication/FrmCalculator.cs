@@ -13,10 +13,15 @@ namespace CalculatorApplication
 {
     public partial class FrmCalculator : Form
     {
+        CalculatorClass cal;
+        public double num1;
+        public double num2;
+
         public FrmCalculator()
         {
             InitializeComponent();
             listoOperator();
+            cal = new CalculatorClass();
         }
 
         public void listoOperator()
@@ -40,7 +45,25 @@ namespace CalculatorApplication
             }
             else
             {
+                double result = 0.0;
 
+                num1 = Convert.ToDouble(txtBoxInput1.Text);
+                num2 = Convert.ToDouble(txtBoxInput2.Text);
+
+                if(cbOperator.SelectedItem.ToString() == "+")
+                {
+                    cal.CalculateEvent += (num1, num2) => cal.GetSum(num1, num2);
+                    //cal.CalculateEvent += cal.GetSum();
+                    lblDisplayTotal.Text = result.ToString();
+
+                }
+
+                // cal.CalculateEvent -= cal.GetSum;
+
+                //cal.CalculateEvent += new Formula<double>(cal.GetSum);
+
+                //lblDisplayTotal.Text = cal.GetSum(num1, num2).ToString();
+                // cal.CalculateEvent -= new Formula<double>(cal.GetSum);
             }
 
         }
